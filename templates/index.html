@@ -1,0 +1,36 @@
+<!--sourced and modified from https://www.w3docs.com/learn-html/html-form-templates.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Article Classifier</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/" method="POST">
+        <div class="banner">
+          <h1>News Article Classifier</h1>
+        </div>
+          <div>
+          <h3 style="background-color:white; font-weight: bold;
+          height: 40px; width: 100%;line-height: 40px;text-valign: center;">
+              {{result | safe}}</h3>
+            </div>
+        <div class="item">
+          <textarea name="text_input" id="text_input" placeholder="Paste The News Article Here."
+                    required></textarea>
+            </div>
+
+
+        <div class="btn-block">
+          <button type="submit" href="/">Predict</button>
+        </div>
+<div class="item">
+          <p style="color: red;">{{error | safe}}</p>
+</div>
+      </form>
+    </div>
+  </body>
+</html>
